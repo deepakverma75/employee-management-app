@@ -11,13 +11,14 @@
         <mat-card-title>Employees by Department</mat-card-title>
       </mat-card-header>
       <div class="chart-switch-wrap">
-        <mat-button-toggle-group
-          [value]="departmentChartType"
-          (change)="departmentChartType = $event.value"
-          aria-label="Department chart type">
-          <mat-button-toggle value="pie">Pie</mat-button-toggle>
-          <mat-button-toggle value="bar">Bar</mat-button-toggle>
-        </mat-button-toggle-group>
+        <div class="chart-toggle">
+          <button class="chart-toggle-btn" [class.active]="departmentChartType === 'pie'" (click)="departmentChartType = 'pie'" aria-label="Switch to Pie Chart">
+            <span>Pie</span>
+          </button>
+          <button class="chart-toggle-btn" [class.active]="departmentChartType === 'bar'" (click)="departmentChartType = 'bar'" aria-label="Switch to Bar Chart">
+            <span>Bar</span>
+          </button>
+        </div>
       </div>
       <mat-card-content>
         <highcharts-chart
@@ -32,13 +33,14 @@
         <mat-card-title>Employment Type Distribution</mat-card-title>
       </mat-card-header>
       <div class="chart-switch-wrap">
-        <mat-button-toggle-group
-          [value]="employmentChartType"
-          (change)="employmentChartType = $event.value"
-          aria-label="Employment chart type">
-          <mat-button-toggle value="pie">Pie</mat-button-toggle>
-          <mat-button-toggle value="bar">Bar</mat-button-toggle>
-        </mat-button-toggle-group>
+        <div class="chart-toggle">
+          <button class="chart-toggle-btn" [class.active]="employmentChartType === 'pie'" (click)="employmentChartType = 'pie'" aria-label="Switch to Pie Chart">
+            <span>Pie</span>
+          </button>
+          <button class="chart-toggle-btn" [class.active]="employmentChartType === 'bar'" (click)="employmentChartType = 'bar'" aria-label="Switch to Bar Chart">
+            <span>Bar</span>
+          </button>
+        </div>
       </div>
       <mat-card-content>
         <highcharts-chart

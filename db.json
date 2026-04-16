@@ -1,35 +1,10 @@
 {
   "employees": [
     {
-      "id": "1775132170397",
-      "name": "John Doe",
-      "designation": "SDE3",
-      "department": "Engineering",
-      "dob": "1995-06-15",
-      "address": [
-        {
-          "type": "Permanent",
-          "line1": "Street 1",
-          "line2": "Area",
-          "city": "Mumbai",
-          "state": "MH",
-          "pincode": 400001
-        }
-      ],
-      "education": "B.Tech",
-      "joiningDate": "2022-01-01",
-      "experience": 5,
-      "employmentType": "Full-time",
-      "status": "Inactive",
-      "salary": 1000000,
-      "bonus": 100000,
-      "currency": "INR"
-    },
-    {
       "id": "1776255652028",
       "name": "Deepak Verma",
       "designation": "Software Engineer 2",
-      "department": "HR",
+      "department": "Finance",
       "dob": "1998-07-02",
       "address": [
         {
@@ -37,42 +12,17 @@
           "line1": "Englishpura",
           "line2": "",
           "city": "Bhopal",
-          "pincode": 466001,
-          "state": "Madhya Pradesh"
+          "state": "Madhya Pradesh",
+          "pincode": 466001
         }
       ],
       "education": "B.Tech",
       "joiningDate": "2026-06-06",
       "experience": 5,
-      "employmentType": "Part-time",
+      "employmentType": "Full-time",
       "status": "Active",
       "salary": 2100000,
       "bonus": 500000,
-      "currency": "INR"
-    },
-    {
-      "id": "1776257237666",
-      "name": "Ankit",
-      "designation": "HR",
-      "department": "HR",
-      "dob": "1981-03-19",
-      "address": [
-        {
-          "type": "Permanent",
-          "line1": "35 Clarendon Lane",
-          "line2": "Iusto molestiae aspe",
-          "city": "Laborum dicta repreh",
-          "state": "Quae nobis totam exc",
-          "pincode": 466001
-        }
-      ],
-      "education": "BCA",
-      "joiningDate": "2018-02-10",
-      "experience": 25,
-      "employmentType": "Contract",
-      "status": "Inactive",
-      "salary": 730000,
-      "bonus": 26000,
       "currency": "INR"
     },
     {
@@ -102,7 +52,7 @@
     },
     {
       "id": "1776257237670",
-      "name": "Mahak Sharma",
+      "name": "rohan Sharma",
       "designation": "Product Manager",
       "department": "Product",
       "dob": "1981-03-19",
@@ -112,8 +62,8 @@
           "line1": "35 Clarendon Lane",
           "line2": "Iusto molestiae aspe",
           "city": "Laborum dicta repreh",
-          "pincode": 466001,
-          "state": "Quae nobis totam exc"
+          "state": "Quae nobis totam exc",
+          "pincode": 466001
         }
       ],
       "education": "MBA",
@@ -406,6 +356,31 @@
       "status": "Active",
       "salary": 3809009,
       "bonus": 559090,
+      "currency": "INR"
+    },
+    {
+      "id": "1776359602174",
+      "name": "Deepak verm",
+      "designation": "Senior Software Engiineer",
+      "department": "Engineering",
+      "dob": "1998-07-02",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "Sehore",
+          "line2": "",
+          "city": "Bhopal",
+          "pincode": 466001,
+          "state": "Madhya Pradesh"
+        }
+      ],
+      "education": "B.Tech CSE",
+      "joiningDate": "2026-06-01",
+      "experience": 5.5,
+      "employmentType": "Full-time",
+      "status": "Active",
+      "salary": 21000000,
+      "bonus": 5000000,
       "currency": "INR"
     }
   ]

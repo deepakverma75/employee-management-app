@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { HighchartsChartComponent } from 'highcharts-angular';
 import { EmployeeService } from '../../core/services/employee.service';
@@ -7,7 +6,7 @@ import { Employee } from '../../core/models/employee.model';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [MatCardModule, MatButtonToggleModule, HighchartsChartComponent],
+  imports: [MatCardModule, HighchartsChartComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

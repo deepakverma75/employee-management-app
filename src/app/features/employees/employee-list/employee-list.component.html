@@ -2,10 +2,14 @@
   <div class="page-title">
     <h2>Employee Directory</h2>
     <div class="view-toggle">
-      <mat-button-toggle-group [value]="viewMode" (change)="setView($event.value)" aria-label="View mode selector">
-        <mat-button-toggle value="table">Table View</mat-button-toggle>
-        <mat-button-toggle value="card">Card View</mat-button-toggle>
-      </mat-button-toggle-group>
+      <button class="toggle-btn" [class.active]="viewMode === 'table'" (click)="setView('table')" aria-label="Switch to Table View">
+        <mat-icon>grid_on</mat-icon>
+        <span>Table</span>
+      </button>
+      <button class="toggle-btn" [class.active]="viewMode === 'card'" (click)="setView('card')" aria-label="Switch to Card View">
+        <mat-icon>apps</mat-icon>
+        <span>Card</span>
+      </button>
     </div>
   </div>
 
@@ -48,93 +52,109 @@
   </form>
 
   @if (viewMode === 'table') {
-    <div class="table-wrap mat-elevation-z2">
-      <table mat-table [dataSource]="employees" matSort (matSortChange)="onSortChange($event)">
-        <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header="name">Name</th>
-          <td mat-cell *matCellDef="let employee">{{ employee.name }}</td>
-        </ng-container>
+    @if (employees.length > 0) {
+      <div class="table-wrap mat-elevation-z2">
+        <table mat-table [dataSource]="employees" matSort (matSortChange)="onSortChange($event)">
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header="name">Name</th>
+            <td mat-cell *matCellDef="let employee">{{ employee.name }}</td>
+          </ng-container>
 
-        <ng-container matColumnDef="department">
-          <th mat-header-cell *matHeaderCellDef>Department</th>
-          <td mat-cell *matCellDef="let employee">{{ employee.department }}</td>
-        </ng-container>
+          <ng-container matColumnDef="department">
+            <th mat-header-cell *matHeaderCellDef>Department</th>
+            <td mat-cell *matCellDef="let employee">{{ employee.department }}</td>
+          </ng-container>
 
-        <ng-container matColumnDef="designation">
-          <th mat-header-cell *matHeaderCellDef>Designation</th>
-          <td mat-cell *matCellDef="let employee">{{ employee.designation }}</td>
-        </ng-container>
+          <ng-container matColumnDef="designation">
+            <th mat-header-cell *matHeaderCellDef>Designation</th>
+            <td mat-cell *matCellDef="let employee">{{ employee.designation }}</td>
+          </ng-container>
 
-        <ng-container matColumnDef="joiningDate">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header="joiningDate">Joining Date</th>
-          <td mat-cell *matCellDef="let employee">{{ employee.joiningDate | employeeDate }}</td>
-        </ng-container>
+          <ng-container matColumnDef="joiningDate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header="joiningDate">Joining Date</th>
+            <td mat-cell *matCellDef="let employee">{{ employee.joiningDate | employeeDate }}</td>
+          </ng-container>
 
-        <ng-container matColumnDef="salary">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header="salary">Salary</th>
-          <td mat-cell *matCellDef="let employee">{{ employee.salary | employeeSalary: employee.currency }}</td>
-        </ng-container>
+          <ng-container matColumnDef="salary">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header="salary">Salary</th>
+            <td mat-cell *matCellDef="let employee">{{ employee.salary | employeeSalary: employee.currency }}</td>
+          </ng-container>
 
-        <ng-container matColumnDef="status">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header="status">Status</th>
-          <td mat-cell *matCellDef="let employee">
-            <mat-chip class="status-chip" [class.active-chip]="employee.status === 'Active'" [class.inactive-chip]="employee.status === 'Inactive'">
-              {{ employee.status }}
-            </mat-chip>
-          </td>
-        </ng-container>
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header="status">Status</th>
+            <td mat-cell *matCellDef="let employee">
+              <mat-chip class="status-chip" [class.active-chip]="employee.status === 'Active'" [class.inactive-chip]="employee.status === 'Inactive'">
+                {{ employee.status }}
+              </mat-chip>
+            </td>
+          </ng-container>
 
-        <ng-container matColumnDef="actions">
-          <th mat-header-cell *matHeaderCellDef>Actions</th>
-          <td mat-cell *matCellDef="let employee" class="actions-col">
-            <button mat-icon-button color="primary" (click)="openEditDialog(employee)">
-              <mat-icon>edit</mat-icon>
-            </button>
-            <button mat-icon-button color="warn" (click)="confirmDelete(employee)">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </td>
-        </ng-container>
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef>Actions</th>
+            <td mat-cell *matCellDef="let employee" class="actions-col">
+              <button mat-icon-button color="primary" (click)="openEditDialog(employee)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="confirmDelete(employee)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-    </div>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    } @else {
+      <div class="no-data-message">
+        <mat-icon>search_off</mat-icon>
+        <p>No employees found</p>
+        <span>Try adjusting your search or filters</span>
+      </div>
+    }
   } @else {
-    <div class="cards-grid">
-      @for (employee of employees; track employee.id) {
-        <mat-card class="employee-card" [class.active-card]="employee.status === 'Active'" [class.inactive-card]="employee.status === 'Inactive'">
-          @if (!isFlipped(employee.id)) {
-            <mat-card-header>
-              <mat-card-title>{{ employee.name }}</mat-card-title>
-              <mat-card-subtitle>{{ employee.designation }}</mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content>
-              <p><strong>Department:</strong> {{ employee.department }}</p>
-              <p><strong>Joining:</strong> {{ employee.joiningDate | employeeDate }}</p>
-              <p><strong>Status:</strong> {{ employee.status }}</p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button (click)="toggleCard(employee.id)">View More</button>
-              <button mat-icon-button color="primary" (click)="openEditDialog(employee)"><mat-icon>edit</mat-icon></button>
-              <button mat-icon-button color="warn" (click)="confirmDelete(employee)"><mat-icon>delete</mat-icon></button>
-            </mat-card-actions>
-          } @else {
-            <mat-card-content>
-              <p><strong>DOB:</strong> {{ employee.dob | employeeDate }}</p>
-              <p><strong>Employment:</strong> {{ employee.employmentType }}</p>
-              <p><strong>Experience:</strong> {{ employee.experience }} years</p>
-              <p><strong>Salary:</strong> {{ employee.salary | employeeSalary: employee.currency }}</p>
-              <p><strong>Bonus:</strong> {{ employee.bonus | employeeSalary: employee.currency }}</p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button (click)="toggleCard(employee.id)">Back</button>
-              <button mat-icon-button color="warn" (click)="confirmDelete(employee)"><mat-icon>delete</mat-icon></button>
-            </mat-card-actions>
-          }
-        </mat-card>
-      }
-    </div>
+    @if (employees.length > 0) {
+      <div class="cards-grid">
+        @for (employee of employees; track employee.id) {
+          <mat-card class="employee-card" [class.active-card]="employee.status === 'Active'" [class.inactive-card]="employee.status === 'Inactive'">
+            @if (!isFlipped(employee.id)) {
+              <mat-card-header>
+                <mat-card-title>{{ employee.name }}</mat-card-title>
+                <mat-card-subtitle>{{ employee.designation }}</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <p><strong>Department:</strong> {{ employee.department }}</p>
+                <p><strong>Joining:</strong> {{ employee.joiningDate | employeeDate }}</p>
+                <p><strong>Status:</strong> {{ employee.status }}</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button (click)="toggleCard(employee.id)">View More</button>
+                <button mat-icon-button color="primary" (click)="openEditDialog(employee)"><mat-icon>edit</mat-icon></button>
+                <button mat-icon-button color="warn" (click)="confirmDelete(employee)"><mat-icon>delete</mat-icon></button>
+              </mat-card-actions>
+            } @else {
+              <mat-card-content>
+                <p><strong>DOB:</strong> {{ employee.dob | employeeDate }}</p>
+                <p><strong>Employment:</strong> {{ employee.employmentType }}</p>
+                <p><strong>Experience:</strong> {{ employee.experience }} years</p>
+                <p><strong>Salary:</strong> {{ employee.salary | employeeSalary: employee.currency }}</p>
+                <p><strong>Bonus:</strong> {{ employee.bonus | employeeSalary: employee.currency }}</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button (click)="toggleCard(employee.id)">Back</button>
+                <button mat-icon-button color="warn" (click)="confirmDelete(employee)"><mat-icon>delete</mat-icon></button>
+              </mat-card-actions>
+            }
+          </mat-card>
+        }
+      </div>
+    } @else {
+      <div class="no-data-message">
+        <mat-icon>search_off</mat-icon>
+        <p>No employees found</p>
+        <span>Try adjusting your search or filters</span>
+      </div>
+    }
   }
 
   <mat-paginator

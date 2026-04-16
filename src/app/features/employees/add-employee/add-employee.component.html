@@ -1,0 +1,32 @@
+<section class="add-employee-wrap">
+  <mat-card class="employee-card">
+    <mat-card-header class="employee-card-header">
+      <div class="header-copy">
+        <mat-card-title>Add Employee</mat-card-title>
+        <mat-card-subtitle>Fill all required employee details</mat-card-subtitle>
+      </div>
+      <span class="header-badge">New Profile</span>
+    </mat-card-header>
+
+    <mat-card-content class="employee-card-content">
+      <form [formGroup]="form" (ngSubmit)="submit()" class="employee-form">
+        <app-employee-form-fields
+          [form]="form"
+          [addressArray]="addressArray"
+          [departments]="departments"
+          [statuses]="statuses"
+          [employmentTypes]="employmentTypes"
+          [currencies]="currencies"
+          [addressTypes]="addressTypes"
+          [showSectionLabels]="false"
+          (addAddressClicked)="addAddress()"
+          (removeAddressClicked)="removeAddress($event)">
+        </app-employee-form-fields>
+
+        <div class="submit-row">
+          <button mat-flat-button class="app-primary-btn" type="submit" [disabled]="form.invalid">Create Employee</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</section>

@@ -1,0 +1,83 @@
+.add-employee-wrap {
+  padding: 1.2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.employee-card {
+  border-radius: 18px;
+  border: 1px solid #d9e6ef;
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(11, 110, 138, 0.08), transparent 34%),
+    #ffffff;
+}
+
+.employee-form {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.employee-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.4rem 1.4rem 0.6rem;
+}
+
+.header-copy {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.employee-card-header mat-card-title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.employee-card-header mat-card-subtitle {
+  margin: 0;
+  color: #475569;
+}
+
+.header-badge {
+  background: #dff5fb;
+  color: #0b6e8a;
+  border: 1px solid #b6e5f1;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.employee-card-content {
+  padding: 0.6rem 1.4rem 1.4rem !important;
+}
+
+.submit-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 700px) {
+  .add-employee-wrap {
+    padding: 0.85rem;
+  }
+
+  .employee-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .employee-card-content {
+    padding: 0.45rem 1rem 1rem !important;
+  }
+}

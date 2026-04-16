@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Update Employee</h2>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <mat-dialog-content class="dialog-content">
+    <app-employee-form-fields
+      [form]="form"
+      [addressArray]="addressArray"
+      [departments]="departments"
+      [statuses]="statuses"
+      [employmentTypes]="employmentTypes"
+      [currencies]="currencies"
+      [addressTypes]="addressTypes"
+      [showSectionLabels]="true"
+      (addAddressClicked)="addAddress()"
+      (removeAddressClicked)="removeAddress($event)">
+    </app-employee-form-fields>
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button mat-dialog-close>Cancel</button>
+    <button mat-flat-button class="app-primary-btn" type="submit" [disabled]="form.invalid || !form.dirty">Update</button>
+  </mat-dialog-actions>
+</form>

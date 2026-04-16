@@ -1,0 +1,6 @@
+@if (isLoading$ | async) {
+  <div class="loader-backdrop" aria-live="polite" aria-busy="true">
+    <mat-spinner diameter="56"></mat-spinner>
+    <p>Processing request...</p>
+  </div>
+}

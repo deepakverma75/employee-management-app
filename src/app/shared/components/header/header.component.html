@@ -1,0 +1,23 @@
+<header class="app-header">
+  <a class="logo-wrap" routerLink="/dashboard" aria-label="Company home">
+    <div class="logo-circle">EH</div>
+    <div>
+      <h1>Employee Management Application</h1>
+      <p>Management Portal</p>
+    </div>
+  </a>
+
+  <nav>
+    <a mat-button routerLink="/dashboard" routerLinkActive="active-link">Dashboard</a>
+    <a mat-button routerLink="/employees" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active-link">Employee List</a>
+    <a mat-button routerLink="/employees/add" routerLinkActive="active-link">Add Employee</a>
+  </nav>
+
+  <div class="profile" aria-label="Logged in user">
+    <mat-icon>account_circle</mat-icon>
+    <div>
+      <strong>Deepak Verma</strong>
+      <span>HR Manager</span>
+    </div>
+  </div>
+</header>

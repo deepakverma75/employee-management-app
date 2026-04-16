@@ -1,0 +1,120 @@
+.employee-list-wrap {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.page-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #0f172a;
+  }
+}
+
+.view-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: radial-gradient(circle at top right, rgba(255, 209, 102, 0.5), transparent 30%),
+    linear-gradient(120deg, #073b4c, #0f766e);
+  border-radius: 999px;
+  padding: 0.25rem;
+
+  mat-button-toggle-group {
+    border: 0;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  mat-button-toggle {
+    color: #e2e8f0;
+    font-weight: 600;
+    min-width: 110px;
+    background: transparent;
+  }
+
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.table-wrap {
+  overflow: auto;
+  border-radius: 14px;
+  background: #fff;
+  max-height: 620px;
+}
+
+table {
+  width: 100%;
+}
+
+::ng-deep .table-wrap .mat-mdc-header-row {
+  background: #f8fafc;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.actions-col {
+  white-space: nowrap;
+}
+
+.status-chip {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 88px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.active-chip {
+  --mdc-chip-elevated-container-color: #dcfce7;
+  color: #166534;
+}
+
+.inactive-chip {
+  --mdc-chip-elevated-container-color: #fee2e2;
+  color: #991b1b;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.9rem;
+}
+
+.employee-card {
+  border-radius: 16px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 25px rgba(2, 8, 23, 0.14);
+  }
+}
+
+.active-card {
+  border-top: 4px solid #22c55e;
+  background: #f0fdf4;
+}
+
+.inactive-card {
+  border-top: 4px solid #f43f5e;
+  background: #fff1f2;
+}
+
+mat-paginator {
+  background: #fff;
+  border-radius: 12px;
+}

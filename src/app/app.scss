@@ -1,0 +1,17 @@
+:host {
+	display: block;
+	min-height: 100dvh;
+}
+
+.app-shell {
+	min-height: 100dvh;
+	background:
+		radial-gradient(circle at 100% 0, rgba(255, 209, 102, 0.35), transparent 28%),
+		linear-gradient(180deg, #eaf5ff 0%, #f8fbff 100%);
+}
+
+.content-wrap {
+	max-width: 1320px;
+	margin-inline: auto;
+	padding: 0.5rem 1rem 1.5rem;
+}

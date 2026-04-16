@@ -1,0 +1,412 @@
+{
+  "employees": [
+    {
+      "id": "1775132170397",
+      "name": "John Doe",
+      "designation": "SDE3",
+      "department": "Engineering",
+      "dob": "1995-06-15",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "Street 1",
+          "line2": "Area",
+          "city": "Mumbai",
+          "state": "MH",
+          "pincode": 400001
+        }
+      ],
+      "education": "B.Tech",
+      "joiningDate": "2022-01-01",
+      "experience": 5,
+      "employmentType": "Full-time",
+      "status": "Inactive",
+      "salary": 1000000,
+      "bonus": 100000,
+      "currency": "INR"
+    },
+    {
+      "id": "1776255652028",
+      "name": "Deepak Verma",
+      "designation": "Software Engineer 2",
+      "department": "HR",
+      "dob": "1998-07-02",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "Englishpura",
+          "line2": "",
+          "city": "Bhopal",
+          "pincode": 466001,
+          "state": "Madhya Pradesh"
+        }
+      ],
+      "education": "B.Tech",
+      "joiningDate": "2026-06-06",
+      "experience": 5,
+      "employmentType": "Part-time",
+      "status": "Active",
+      "salary": 2100000,
+      "bonus": 500000,
+      "currency": "INR"
+    },
+    {
+      "id": "1776257237666",
+      "name": "Ankit",
+      "designation": "HR",
+      "department": "HR",
+      "dob": "1981-03-19",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "35 Clarendon Lane",
+          "line2": "Iusto molestiae aspe",
+          "city": "Laborum dicta repreh",
+          "state": "Quae nobis totam exc",
+          "pincode": 466001
+        }
+      ],
+      "education": "BCA",
+      "joiningDate": "2018-02-10",
+      "experience": 25,
+      "employmentType": "Contract",
+      "status": "Inactive",
+      "salary": 730000,
+      "bonus": 26000,
+      "currency": "INR"
+    },
+    {
+      "id": "1776257237668",
+      "name": "Rahul Sharma",
+      "designation": "MR",
+      "department": "MR",
+      "dob": "1981-03-19",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "35 Clarendon Lane",
+          "line2": "Iusto molestiae aspe",
+          "city": "Laborum dicta repreh",
+          "state": "Quae nobis totam exc",
+          "pincode": 466001
+        }
+      ],
+      "education": "MSC",
+      "joiningDate": "2018-02-10",
+      "experience": 25,
+      "employmentType": "Intern",
+      "status": "Active",
+      "salary": 50000,
+      "bonus": 26000,
+      "currency": "USD"
+    },
+    {
+      "id": "1776257237670",
+      "name": "Mahak Sharma",
+      "designation": "Product Manager",
+      "department": "Product",
+      "dob": "1981-03-19",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "35 Clarendon Lane",
+          "line2": "Iusto molestiae aspe",
+          "city": "Laborum dicta repreh",
+          "pincode": 466001,
+          "state": "Quae nobis totam exc"
+        }
+      ],
+      "education": "MBA",
+      "joiningDate": "2018-02-10",
+      "experience": 25,
+      "employmentType": "Part-time",
+      "status": "Inactive",
+      "salary": 1500000,
+      "bonus": 26000,
+      "currency": "GBP"
+    },
+    {
+      "id": "1776266468685",
+      "name": "Sloane Parker",
+      "designation": "CEO",
+      "department": "Operations",
+      "dob": "1980-07-01",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "912 East New Parkway",
+          "line2": "Voluptatem sint quia",
+          "city": "Animi vel dolore vo",
+          "state": "Minima eligendi reru",
+          "pincode": 787878
+        }
+      ],
+      "education": "Aspernatur deserunt ",
+      "joiningDate": "2009-06-02",
+      "experience": 1986,
+      "employmentType": "Contract",
+      "status": "Active",
+      "salary": 4700909,
+      "bonus": 97787,
+      "currency": "EUR"
+    },
+    {
+      "id": "1776268910806",
+      "name": "Violet Robertson",
+      "designation": "Veritatis enim vel v",
+      "department": "Sales",
+      "dob": "1989-09-21",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "56 White New Freeway",
+          "line2": "Enim non commodo dol",
+          "city": "Dolores dolores laud",
+          "pincode": 1546674,
+          "state": "Enim provident magn"
+        }
+      ],
+      "education": "Non mollit nobis nis",
+      "joiningDate": "1993-03-14",
+      "experience": 2005,
+      "employmentType": "Full-time",
+      "status": "Active",
+      "salary": 8544545,
+      "bonus": 345464564,
+      "currency": "INR"
+    },
+    {
+      "id": "1776327121117",
+      "name": "Bethany Melendez",
+      "designation": "Senior HR",
+      "department": "HR",
+      "dob": "2002-12-15",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "65 Milton Street",
+          "line2": "Sit aperiam minus i",
+          "city": "Non neque in tempor ",
+          "pincode": 329343,
+          "state": "Qui omnis dolorem ni"
+        }
+      ],
+      "education": "Obcaecati quasi itaq",
+      "joiningDate": "2013-04-30",
+      "experience": 20,
+      "employmentType": "Contract",
+      "status": "Active",
+      "salary": 87000,
+      "bonus": 173293,
+      "currency": "EUR"
+    },
+    {
+      "id": "1776335965747",
+      "name": "Fulton Aguilar",
+      "designation": "Director",
+      "department": "Finance",
+      "dob": "2017-07-14",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "51 Cowley Lane",
+          "line2": "Lorem maiores et fug",
+          "city": "Perspiciatis nisi d",
+          "state": "Eos ad proident qu",
+          "pincode": 264767
+        }
+      ],
+      "education": "Pariatur Ut est acc",
+      "joiningDate": "1978-11-11",
+      "experience": 2015,
+      "employmentType": "Full-time",
+      "status": "Inactive",
+      "salary": 2400009,
+      "bonus": 314384,
+      "currency": "INR"
+    },
+    {
+      "id": "1776336030609",
+      "name": "Fletcher Odom",
+      "designation": "CFO",
+      "department": "Finance",
+      "dob": "1979-04-23",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "19 Second Court",
+          "line2": "Reprehenderit nostru",
+          "city": "Ipsam beatae illo qu",
+          "state": "In sunt rem velit et",
+          "pincode": 945454
+        },
+        {
+          "type": "Permanent",
+          "line1": "927 White Hague Extension",
+          "line2": "Voluptas enim ab ali",
+          "city": "Placeat exercitatio",
+          "state": "Minim labore et eu o",
+          "pincode": 714854
+        }
+      ],
+      "education": "Eius esse velit pari",
+      "joiningDate": "2017-12-03",
+      "experience": 1983,
+      "employmentType": "Intern",
+      "status": "Active",
+      "salary": 354785,
+      "bonus": 424384,
+      "currency": "INR"
+    },
+    {
+      "id": "1776337209723",
+      "name": "Dexter Simpson",
+      "designation": "Senior Engineer",
+      "department": "Engineering",
+      "dob": "2016-05-26",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "Inventore distinctio",
+          "line2": "Numquam at aut aliqu",
+          "city": "Reiciendis ad nihil ",
+          "state": "Explicabo Harum a c",
+          "pincode": 446437
+        }
+      ],
+      "education": "Amet beatae atque m",
+      "joiningDate": "2011-12-05",
+      "experience": 1986,
+      "employmentType": "Contract",
+      "status": "Active",
+      "salary": 8943877,
+      "bonus": 37348,
+      "currency": "INR"
+    },
+    {
+      "id": "1776337504157",
+      "name": "Jenette Mendoza",
+      "designation": "SDE-3",
+      "department": "Engineering",
+      "dob": "1993-11-16",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "Elit in ea illo qui",
+          "line2": "Voluptates voluptate",
+          "city": "Anim aute quis non m",
+          "pincode": 964384,
+          "state": "Quis omnis culpa la"
+        }
+      ],
+      "education": "Fugiat officiis cor",
+      "joiningDate": "2020-08-30",
+      "experience": 20,
+      "employmentType": "Full-time",
+      "status": "Active",
+      "salary": 56487581,
+      "bonus": 6048476,
+      "currency": "INR"
+    },
+    {
+      "id": "1776337934988",
+      "name": "Rohan Khatri",
+      "designation": "SDE-2",
+      "department": "Engineering",
+      "dob": "1998-09-20",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "Cumque distinctio C",
+          "line2": "Atque dolorem unde q",
+          "city": "Aperiam sed odio dol",
+          "state": "Suscipit earum labor",
+          "pincode": 396473
+        }
+      ],
+      "education": "Amet adipisci ut fu",
+      "joiningDate": "1985-05-08",
+      "experience": 4,
+      "employmentType": "Full-time",
+      "status": "Inactive",
+      "salary": 414384,
+      "bonus": 42438,
+      "currency": "INR"
+    },
+    {
+      "id": "1776337974317",
+      "name": "Phelan Charles",
+      "designation": "Senior HR",
+      "department": "HR",
+      "dob": "1986-04-15",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "Temporibus tenetur e",
+          "line2": "Numquam id non dolor",
+          "city": "Sit suscipit repell",
+          "pincode": 500001,
+          "state": "Aliquid qui at in do"
+        }
+      ],
+      "education": "Aut maiores dignissi",
+      "joiningDate": "1973-08-04",
+      "experience": 1997,
+      "employmentType": "Full-time",
+      "status": "Active",
+      "salary": 993878,
+      "bonus": 91437,
+      "currency": "INR"
+    },
+    {
+      "id": "1776338012554",
+      "name": "Daquan Whitaker",
+      "designation": "SDE-4",
+      "department": "Engineering",
+      "dob": "2018-12-11",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "Tempore officia err",
+          "line2": "Culpa sunt ipsum v",
+          "city": "Hic nostrum id proid",
+          "pincode": 853688,
+          "state": "Obcaecati ex sunt si"
+        }
+      ],
+      "education": "Et aliquid doloribus",
+      "joiningDate": "2009-08-04",
+      "experience": 1985,
+      "employmentType": "Full-time",
+      "status": "Active",
+      "salary": 10000909,
+      "bonus": 86787,
+      "currency": "INR"
+    },
+    {
+      "id": "1776341672070",
+      "name": "Leo Bryan",
+      "designation": "SDE-3",
+      "department": "Engineering",
+      "dob": "1992-06-23",
+      "address": [
+        {
+          "type": "Permanent",
+          "line1": "Irure ullamco ea min",
+          "line2": "Laborum Elit commo",
+          "city": "Aut porro id in omn",
+          "pincode": 3245,
+          "state": "Provident ex perspi"
+        }
+      ],
+      "education": "Dignissimos aliquid ",
+      "joiningDate": "1985-06-02",
+      "experience": 12,
+      "employmentType": "Full-time",
+      "status": "Active",
+      "salary": 3809009,
+      "bonus": 559090,
+      "currency": "INR"
+    }
+  ]
+}

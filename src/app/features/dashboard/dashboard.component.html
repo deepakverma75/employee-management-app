@@ -1,0 +1,51 @@
+<section class="dashboard-wrap">
+  <div class="hero-card">
+    <h2>Workforce Snapshot</h2>
+    <p>Live statistics from your employee database.</p>
+    <div class="count-pill">{{ totalEmployees }} Total Employees</div>
+  </div>
+
+  <div class="grid">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Employees by Department</mat-card-title>
+      </mat-card-header>
+      <div class="chart-switch-wrap">
+        <mat-button-toggle-group
+          [value]="departmentChartType"
+          (change)="departmentChartType = $event.value"
+          aria-label="Department chart type">
+          <mat-button-toggle value="pie">Pie</mat-button-toggle>
+          <mat-button-toggle value="bar">Bar</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      <mat-card-content>
+        <highcharts-chart
+          [options]="departmentChartOptions"
+          class="chart-host">
+        </highcharts-chart>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Employment Type Distribution</mat-card-title>
+      </mat-card-header>
+      <div class="chart-switch-wrap">
+        <mat-button-toggle-group
+          [value]="employmentChartType"
+          (change)="employmentChartType = $event.value"
+          aria-label="Employment chart type">
+          <mat-button-toggle value="pie">Pie</mat-button-toggle>
+          <mat-button-toggle value="bar">Bar</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      <mat-card-content>
+        <highcharts-chart
+          [options]="employmentChartOptions"
+          class="chart-host">
+        </highcharts-chart>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
